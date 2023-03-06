@@ -1,0 +1,68 @@
+@use '../utils/' as *;
+
+.filter {
+  padding-block: rem(32px);
+
+  &__tag-list {
+    width: fit-content;
+  }
+
+  &__tag {
+    display: inline-block;
+    background-color: $clr-blue;
+    padding: rem(4px) rem(8px);
+    border-radius: rem(4px);
+    color: $clr-white;
+    display: inline-flex;
+    align-items: center;
+    gap: rem(8px);
+    margin-bottom: rem(12px);
+  }
+
+  &__tag-close {
+    cursor: pointer;
+  }
+
+  &__select {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__select:not(:last-child) {
+    margin: 0 rem(12px) rem(12px) 0;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    background-color: red;
+    padding: rem(12px);
+    border-radius: rem(6px);
+    font-weight: $fw-bold;
+    color: $clr-white;
+  }
+
+  &__input--ingredients {
+    background-color: $clr-blue;
+  }
+  &__input--devices {
+    background-color: $clr-green;
+  }
+  &__input--utensils {
+    background-color: $clr-red;
+  }
+
+  &__input::placeholder {
+    color: $clr-white;
+  }
+
+  &__icon {
+    font-size: rem(24px);
+    color: $clr-white;
+    position: absolute;
+    right: rem(6px);
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
