@@ -1,11 +1,8 @@
 @use '../utils/' as *;
 
 .searchbar {
-  padding-inline: rem(16px);
-
   &__form {
     position: relative;
-    // background-color: red;
   }
 
   &__input {
