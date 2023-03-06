@@ -4,32 +4,36 @@
   padding-block: rem(32px);
 
   &__tag-list {
-    width: fit-content;
+    max-width: 100%;
+    display: flex;
+    gap: rem(8px);
+    flex-wrap: wrap;
+    margin-bottom: rem(12px);
   }
 
   &__tag {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: rem(8px);
     background-color: $clr-blue;
     padding: rem(4px) rem(8px);
     border-radius: rem(4px);
     color: $clr-white;
-    display: inline-flex;
-    align-items: center;
-    gap: rem(8px);
-    margin-bottom: rem(12px);
   }
 
   &__tag-close {
     cursor: pointer;
   }
 
+  &__select-list {
+    display: flex;
+    gap: rem(12px);
+    flex-wrap: wrap;
+  }
+
   &__select {
     position: relative;
     display: inline-block;
-  }
-
-  &__select:not(:last-child) {
-    margin: 0 rem(12px) rem(12px) 0;
   }
 
   &__input {
