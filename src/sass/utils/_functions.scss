@@ -1,0 +1,4 @@
+// Convert the px value in rem val
+@function rem($size) {
+  @return calc($size / 16px * 1rem);
+}

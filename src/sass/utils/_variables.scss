@@ -1,0 +1,37 @@
+@use './functions' as *;
+
+/* --------- Import Fonts --------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* --------- Variables --------- */
+
+// Colors
+$clr-primary-400: hsl(240, 46%, 50%);
+$clr-primary-700: hsl(240, 46%, 20%);
+$clr-secondary-400: hsl(340, 60%, 60%);
+$clr-secondary-700: hsl(340, 60%, 40%);
+$clr-title: hsl(240, 8%, 15%);
+$clr-text: hsl(0, 0%, 10%);
+$clr-body: hsl(174, 100%, 99%);
+$clr-container: #fff;
+
+// Font Family
+$ff-primary: 'Poppins', sans-serif;
+
+// Font Size
+$fs-tiny: rem(10px);
+$fs-smaller: rem(12px);
+$fs-small: rem(14px);
+$fs-regular: rem(16px);
+$fs-medium: rem(18px);
+$fs-large: rem(20px);
+$fs-sub-title: rem(24px);
+$fs-title: rem(32px);
+$fs-big-title: rem(40px);
+
+// Font Weight
+$fw-light: 200;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;

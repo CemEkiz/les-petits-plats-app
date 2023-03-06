@@ -1,0 +1,77 @@
+@use '../utils/' as *;
+
+// Box sizing rules
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Remove default margin and set auto-calculated line-height
+* {
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+// Remove built-in form typography styles
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// Remove default styles from links
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Remove default styles from lists
+ul,
+ol,
+summary {
+  list-style: none;
+}
+
+// Avoid text overflows
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+// Set smooth scroll
+html,
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+// Set core body defaults
+body {
+  font-family: $ff-primary;
+  font-size: $fs-regular;
+  color: $clr-text;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Allow percentage-based heights in the application
+html,
+body {
+  height: 100%;
+}
+
+// Make images easier to work with
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
