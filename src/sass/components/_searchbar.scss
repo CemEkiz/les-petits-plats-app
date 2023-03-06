@@ -1,0 +1,35 @@
+@use '../utils/' as *;
+
+.searchbar {
+  padding-inline: rem(16px);
+
+  &__form {
+    position: relative;
+    // background-color: red;
+  }
+
+  &__input {
+    width: 100%;
+    padding: rem(20px);
+    font-size: rem(18px);
+    border-radius: rem(6px);
+    border: none;
+    outline: none;
+    background-color: $clr-gray-200;
+
+    &::placeholder {
+      color: $clr-gray-400;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: rem(10px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__icon {
+    font-size: rem(32px);
+  }
+}
