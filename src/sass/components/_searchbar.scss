@@ -17,6 +17,9 @@
     &::placeholder {
       color: $clr-gray-400;
     }
+    &:focus {
+      outline: 2px solid $clr-gray-700;
+    }
   }
 
   &__button {
@@ -28,5 +31,6 @@
 
   &__icon {
     font-size: rem(32px);
+    cursor: pointer;
   }
 }
