@@ -2,7 +2,7 @@ if (module.hot) {
   module.hot.accept();
 }
 
-const handlePlaceholder = inputId => {
+const handleSearchPlaceholder = inputId => {
   const input = document.getElementById(inputId);
 
   const addPlaceholder = () => {
@@ -30,4 +30,4 @@ const handlePlaceholder = inputId => {
   });
 };
 
-handlePlaceholder('searchbar-input');
+handleSearchPlaceholder('searchbar-input');
