@@ -1,7 +1,12 @@
 @use '../utils/' as *;
 
 .container {
-  max-width: 1024px;
+  max-width: 1248px;
   margin-inline: auto;
   padding-inline: rem(32px);
+  margin-bottom: rem(32px);
+
+  @include respond(small-mobile) {
+    padding-inline: rem(16px);
+  }
 }

@@ -1,0 +1,16 @@
+@use '../utils/' as *;
+
+.recipe {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(32px);
+  padding-bottom: rem(48px);
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(laptop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

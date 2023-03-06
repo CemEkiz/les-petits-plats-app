@@ -6,6 +6,13 @@
 // 1536px & more      =>    big-screen    =>    (min-width: 1536px)    =>    (1536/16 = 96em)
 
 @mixin respond($breakpoint) {
+  // 360px & below
+  @if $breakpoint == small-mobile {
+    @media only screen and (max-width: 22.5em) {
+      @content;
+    }
+  }
+
   // 640px
   @if $breakpoint == tab-port {
     @media only screen and (min-width: 40em) {

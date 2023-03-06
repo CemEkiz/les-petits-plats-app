@@ -1,8 +1,6 @@
 @use '../utils/' as *;
 
 .filter {
-  padding-block: rem(32px);
-
   &__tag-list {
     max-width: 100%;
     display: flex;

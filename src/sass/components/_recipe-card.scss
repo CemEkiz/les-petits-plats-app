@@ -1,0 +1,69 @@
+@use '../utils/' as *;
+
+.recipe {
+  &__card {
+    border-radius: rem(6px);
+    overflow: hidden;
+  }
+
+  &__img {
+    height: 180px;
+    background-color: $clr-gray-700;
+  }
+
+  &__data {
+    background-color: $clr-gray-200;
+    padding-inline: rem(24px);
+    padding-block: rem(24px) rem(48px);
+
+    display: grid;
+    row-gap: rem(24px);
+  }
+
+  &__header {
+    // text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(6px);
+  }
+
+  &__title {
+    font-weight: $fw-regular;
+  }
+
+  &__time {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: rem(8px);
+    font-weight: $fw-bold;
+  }
+
+  &__time-icon {
+    position: absolute;
+    left: rem(-28px);
+    font-size: rem(20px);
+  }
+
+  &__ingredients-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__ingredient {
+    font-weight: $fw-bold;
+  }
+
+  &__quantity {
+    font-weight: $fw-regular;
+  }
+
+  &__description {
+    display: inline-block;
+    height: 48px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

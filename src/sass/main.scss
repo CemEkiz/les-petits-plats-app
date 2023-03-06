@@ -1,7 +1,10 @@
 @forward 'base/reset';
 @forward 'base/helpers';
+@forward 'base/scrollbar';
 
 @forward 'layout/header';
+@forward 'layout/recipe';
 
 @forward 'components/searchbar';
 @forward 'components/filters';
+@forward 'components/recipe-card';
