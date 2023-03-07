@@ -32,9 +32,15 @@
   &__select {
     position: relative;
     display: inline-block;
+    width: 100%;
+
+    @include respond(tab-port) {
+      width: auto;
+    }
   }
 
   &__input {
+    width: 100%;
     border: none;
     outline: none;
     background-color: red;
@@ -42,6 +48,10 @@
     border-radius: rem(6px);
     font-weight: $fw-bold;
     color: $clr-white;
+
+    @include respond(tab-port) {
+      width: auto;
+    }
   }
 
   &__input--ingredients {
