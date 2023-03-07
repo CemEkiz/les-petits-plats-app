@@ -33,35 +33,40 @@
     position: relative;
     display: inline-block;
     width: 100%;
+    border-radius: rem(6px);
+    overflow: hidden;
+    height: fit-content;
 
     @include respond(tab-port) {
       width: auto;
     }
+  }
+
+  &__select--ingredients {
+    background-color: $clr-blue;
+  }
+
+  &__select--devices {
+    background-color: $clr-green;
+  }
+
+  &__select--utensils {
+    background-color: $clr-red;
   }
 
   &__input {
     width: 100%;
     border: none;
     outline: none;
-    background-color: red;
     padding: rem(12px);
-    border-radius: rem(6px);
+    // border-radius: rem(6px);
     font-weight: $fw-bold;
     color: $clr-white;
+    background-color: inherit;
 
     @include respond(tab-port) {
       width: auto;
     }
-  }
-
-  &__input--ingredients {
-    background-color: $clr-blue;
-  }
-  &__input--devices {
-    background-color: $clr-green;
-  }
-  &__input--utensils {
-    background-color: $clr-red;
   }
 
   &__input::placeholder {
@@ -73,8 +78,27 @@
     color: $clr-white;
     position: absolute;
     right: rem(6px);
-    top: 50%;
+    top: rem(24px);
     transform: translateY(-50%);
     cursor: pointer;
+  }
+
+  &__choice-list {
+    background-color: inherit;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: rem(4px);
+    column-gap: rem(64px);
+    padding: 0 rem(12px) rem(12px) rem(12px);
+    color: $clr-white;
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond(small-mobile) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
   }
 }
