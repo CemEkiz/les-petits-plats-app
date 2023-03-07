@@ -15,9 +15,14 @@
     background-color: $clr-gray-200;
     padding-inline: rem(24px);
     padding-block: rem(24px) rem(48px);
+    font-size: $fs-small;
 
     display: grid;
     row-gap: rem(24px);
+
+    @include respond(laptop) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__header {
@@ -26,6 +31,10 @@
     flex-direction: column;
     align-items: center;
     gap: rem(6px);
+
+    @include respond(laptop) {
+      grid-column: 1 / span 2;
+    }
   }
 
   &__title {
@@ -65,5 +74,9 @@
     white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @include respond(laptop) {
+      height: 130px;
+    }
   }
 }
