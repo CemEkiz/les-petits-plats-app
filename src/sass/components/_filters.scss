@@ -73,6 +73,10 @@
     color: $clr-white;
   }
 
+  &__input:focus::placeholder {
+    opacity: 0.5;
+  }
+
   &__icon {
     font-size: rem(24px);
     color: $clr-white;
@@ -83,7 +87,7 @@
     cursor: pointer;
   }
 
-  &__choice-list {
+  &__list {
     background-color: inherit;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
