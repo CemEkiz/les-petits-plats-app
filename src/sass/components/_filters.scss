@@ -31,7 +31,9 @@
 
   &__select {
     position: relative;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: min-content min-content;
+    align-items: center;
     width: 100%;
     border-radius: rem(6px);
     overflow: hidden;
@@ -79,16 +81,16 @@
   &__icon {
     font-size: rem(24px);
     color: $clr-white;
-    position: absolute;
     right: rem(6px);
     top: rem(24px);
-    transform: translateY(-50%);
+    padding-inline: rem(12px);
+    transition: all 0.4s;
     cursor: pointer;
   }
 
   &__list {
     background-color: inherit;
-    display: grid;
+    display: none;
     grid-template-columns: repeat(2, 1fr);
     row-gap: rem(4px);
     column-gap: rem(64px);
@@ -104,4 +106,12 @@
       justify-items: center;
     }
   }
+}
+
+.icon-selected {
+  transform: rotate(180deg);
+}
+
+.filter-open {
+  display: grid;
 }
