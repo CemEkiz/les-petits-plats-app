@@ -9,17 +9,17 @@ const Filter = () => {
       </div>
       <div class="filter__select-list">
         <div class="filter__select filter__select--ingredients">
-          <input type="text" placeholder="Ingredients" class="filter__input" />
+          <input type="text" placeholder="Ingrédients" class="filter__input" id="ingredients-input" />
           <i class="bx bx-chevron-down filter__icon"></i>
           <ul class="filter__list"></ul>
         </div>
         <div class="filter__select filter__select--devices">
-          <input type="text" placeholder="Appareils" class="filter__input" />
+          <input type="text" placeholder="Appareils" class="filter__input" id="devices-input" />
           <i class="bx bx-chevron-down filter__icon"></i>
           <ul class="filter__list"></ul>
         </div>
         <div class="filter__select filter__select--utensils">
-          <input type="text" placeholder="Ustensiles" class="filter__input" />
+          <input type="text" placeholder="Ustensiles" class="filter__input" id="utensils-input" />
           <i class="bx bx-chevron-down filter__icon"></i>
           <ul class="filter__list"></ul>
         </div>
