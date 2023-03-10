@@ -31,7 +31,8 @@ a {
 // Remove default styles from lists
 ul,
 ol,
-summary {
+summary,
+li {
   list-style: none;
 }
 
