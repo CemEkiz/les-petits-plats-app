@@ -1,7 +1,7 @@
 // prettier-ignore
 import { Header, Filter, RecipeList, SearchBar } from './components';
 import setPlaceholder from './helpers/setPlaceholder';
-import showFilter from './helpers/toggleFilterList';
+import toggleFilterList from './helpers/toggleFilterList';
 
 const buildApp = root => {
   const app = document.getElementById(root);
@@ -25,7 +25,7 @@ const buildApp = root => {
   );
   setPlaceholder('devices-input', 'Rechercher un appareil', 'Appareils');
   setPlaceholder('utensils-input', 'Rechercher un ustensile', 'Ustensiles');
-  showFilter();
+  toggleFilterList();
 };
 
 buildApp('app');
