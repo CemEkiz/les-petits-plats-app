@@ -4,6 +4,8 @@
   &__card {
     border-radius: rem(6px);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   &__img {
@@ -16,8 +18,10 @@
     padding-inline: rem(24px);
     padding-block: rem(24px) rem(48px);
     font-size: $fs-small;
+    flex: 1;
 
     display: grid;
+    grid-template-rows: min-content 1fr;
     row-gap: rem(24px);
 
     @include respond(laptop) {
@@ -39,6 +43,7 @@
 
   &__title {
     font-weight: $fw-regular;
+    text-align: center;
   }
 
   &__time {
@@ -58,6 +63,9 @@
   &__ingredients-list {
     display: flex;
     flex-direction: column;
+    row-gap: 2px;
+    margin-right: 10px;
+    // line-height: 0.9;
   }
 
   &__ingredient {
@@ -74,6 +82,7 @@
     white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 1.15;
 
     @include respond(laptop) {
       height: 130px;
