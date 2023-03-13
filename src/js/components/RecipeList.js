@@ -7,6 +7,14 @@ const RecipeList = () => {
 
   // Generate a recipe card for all of recipes
   recipes.forEach(recipe => {
+    // TODO: faire la boucle pour la liste des ingrédients
+    // Variable qui soit le résultat de la boucle
+    const listIngredients = recipe.ingredients.map(ingredient => {
+      return `<li class="recipe__ingredient">${ingredient?.ingredient}: ${
+        ingredient?.quantity
+      } ${ingredient?.unit ?? ''}</li>`;
+    });
+
     const recipeCardMarkup = `<article class="recipe__card">
     <div class="recipe__img"></div>
 
@@ -14,32 +22,20 @@ const RecipeList = () => {
       <div class="recipe__header">
         <h2 class="recipe__title">${recipe.name}</h2>
         <span class="recipe__time"
-          ><i class="bx bx-time-five recipe__time-icon"></i> ${recipe.time} min</span
+          ><i class="bx bx-time-five recipe__time-icon"></i> ${
+            recipe.time
+          } min</span
         >
       </div>
-
-      <ul class="recipe__ingredients-list">
-        <li class="recipe__ingredient">
-          Lait de coco: <span class="recipe__quantity">400ml</span>
-        </li>
-        <li class="recipe__ingredient">
-          Jus de citron: <span class="recipe__quantity">2</span>
-        </li>
-        <li class="recipe__ingredient">
-          Crème de coco:
-          <span class="recipe__quantity">4 cuillières</span>
-        </li>
-        <li class="recipe__ingredient">
-          Sucre: <span class="recipe__quantity">20g</span>
-        </li>
-        <li class="recipe__ingredient">
-          Glaçons: <span class="recipe__quantity">2</span>
-        </li>
-      </ul>
-
-      <p class="recipe__description">
-        ${recipe.description}
-      </p>
+         
+        <ul class="recipe__ingredients-list">
+        ${listIngredients.join('')}
+        </ul>
+        
+        <p class="recipe__description">
+          ${recipe.description}
+        </p>
+      
     </div>
   </article>
   `;
