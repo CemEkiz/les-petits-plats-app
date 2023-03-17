@@ -7,8 +7,6 @@ const RecipeList = () => {
 
   // Generate a recipe card for all of recipes
   recipes.forEach(recipe => {
-    // TODO: faire la boucle pour la liste des ingrédients
-    // Variable qui soit le résultat de la boucle
     const listIngredients = recipe.ingredients.map(ingredient => {
       return `<li class="recipe__ingredient">${ingredient?.ingredient}: ${
         ingredient?.quantity
