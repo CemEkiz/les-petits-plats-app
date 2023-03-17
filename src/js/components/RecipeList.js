@@ -8,9 +8,11 @@ const RecipeList = () => {
   // Generate a recipe card for all of recipes
   recipes.forEach(recipe => {
     const listIngredients = recipe.ingredients.map(ingredient => {
-      return `<li class="recipe__ingredient">${ingredient?.ingredient}: ${
-        ingredient?.quantity
-      } ${ingredient?.unit ?? ''}</li>`;
+      return `
+      <li class="recipe__ingredient">
+      ${ingredient?.ingredient}${ingredient.quantity ? ':' : ''} 
+      ${ingredient?.quantity ?? ''} ${ingredient?.unit ?? ''}
+      </li>`;
     });
 
     const recipeCardMarkup = `<article class="recipe__card">
